@@ -1,0 +1,970 @@
+@charset "UTF-8";
+/* ========== FUENTES ========== */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto:wght@300;400;500;700&display=swap");
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*==  HEADER ==*/
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* ========== MENÚ ========== */
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.menu__img {
+  width: 140px;
+  height: auto;
+}
+
+.menu__button {
+  z-index: 3;
+}
+
+.menu__ul {
+  position: relative;
+}
+
+/*==  MENÚ ANIMADO ==*/
+.menu__li {
+  z-index: 1;
+  padding: 0px 5px;
+}
+
+.menu__link {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.menu__link::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff98;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.menu__link:hover::after {
+  transform: scale(1);
+}
+
+/*==  MODIFICANDO EL ICONO DE MENÚ DE BOOSTRAP ==*/
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
+.navbar-dark .navbar-toggler:focus {
+  border: none;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url(../assets/img/menu/menu-blanco.png);
+}
+
+/*==  PRESENTACIÓN ==*/
+.presentacion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.presentacion__contenedor {
+  max-width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.presentacion__izquierda {
+  width: 500px;
+  height: auto;
+  display: inline-block;
+}
+
+.presentacion__derecha {
+  width: 500px;
+  height: auto;
+  display: inline-block;
+  padding: 30px;
+}
+
+.presentacion__titulo, .presentacion__parrafo {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.presentacion__titulo {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.presentacion__parrafo {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.presentacion__palabra {
+  padding: 0px 10px;
+  background-color: #fff;
+  color: #0010a3;
+}
+
+.presentacionUno {
+  background-image: url(../assets/img/fondos/home.jpg);
+}
+
+.presentacionDos {
+  background-image: url(../assets/img/fondos/acerca.jpg);
+}
+
+.presentacionTres {
+  background-image: url(../assets/img/fondos/servicios.jpg);
+}
+
+.presentacionCuatro {
+  background-image: url(../assets/img/fondos/portafolio.jpg);
+}
+
+.presentacionCinco {
+  background-image: url(../assets/img/fondos/contacto.jpg);
+}
+
+/*==  SCROLL==*/
+.scroll {
+  width: 25px;
+  position: absolute;
+  height: 40px;
+  background-color: transparent;
+  right: calc(50% - 12.5px);
+  bottom: 5%;
+}
+
+.scroll__mouse {
+  display: block;
+  position: relative;
+  height: 45px;
+  width: 25px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: mouse alternate 0.8s infinite;
+}
+
+.scroll__mouse::after {
+  position: absolute;
+  border-radius: 2px;
+  width: 2px;
+  height: 0px;
+  content: "";
+  background: #fff;
+  margin-left: 10px;
+  margin-top: 5px;
+  animation: mouse-bola alternate 0.8s infinite;
+}
+
+.scroll__scrollLink {
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@keyframes mouse-bola {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+
+@keyframes mouse {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, calc(-50% + 20px));
+    transform: translate(-50%, calc(-50% + 20px));
+  }
+}
+
+/*==  PROPIEDADES QUE SE REPITEN ==*/
+/* ========== IGULAES 1 ========== */
+/*==  ENCABEZADO ==*/
+.equipo__contenedorEncabezado, .servicios__contenedorEncabezado, .portafolio__contenedorEncabezado, .contacto__contenedorEncabezado {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*==  TÍTULO ==*/
+.bienvenida__titulo, .suscripcion__titulo, .clientes__titulo, .historia__titulo, .equipo__titulo, .misionVision__titulo, .servicios__titulo, .portafolio__titulo, .contacto__titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.historia__titulo {
+  margin-top: 30px;
+}
+
+.misionVision__titulo {
+  margin-top: 30px;
+}
+
+/*==  PÁRRAFO ==*/
+.bienvenida__parrafo, .historia__parrafo, .equipo__parrafo, .servicios__parrafo, .portafolio__parrafo, .contacto__parrafo, .misionVision__parrafo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.equipo__parrafo, .servicios__parrafo, .portafolio__parrafo, .contacto__parrafo {
+  width: 85%;
+  text-align: center;
+  color: #000000;
+  margin: 0 auto;
+}
+
+/* ========== IGUALES 2 ========== */
+.historia__img, .misionVision__img {
+  width: 100%;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.245);
+}
+
+.row {
+  margin: 0;
+}
+
+/* ========== IGUALES 3 ========== */
+.bienvenida, .historia, .misionVision {
+  padding: 6rem 2rem;
+}
+
+.suscripcion ::placeholder,
+.footer ::placeholder {
+  padding-left: 15px;
+}
+
+.clientes, .equipo, .servicios, .portafolio, .contacto {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 60px 0px;
+}
+
+/* ========== MAIN ========== */
+/* ////////////////////////////// INDEX.HTML ////////////////////////////// */
+/* ========== BIENVENIDA ========== */
+.bienvenida__video {
+  width: 100%;
+}
+
+/* ========== SUSCRIPCIÓN ========== */
+.suscripcion {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.163), rgba(0, 0, 0, 0.779), rgba(0, 0, 0, 0.163)), url("../assets/img/fondos/fondo-negro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.suscripcion__contenedor {
+  width: 40%;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.suscripcion__titulo {
+  text-align: center;
+  color: #fff;
+}
+
+.suscripcion__form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.suscripcion__form--email {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.suscripcion__form--submit {
+  width: 100px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: #f0c016;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.suscripcion__form--submit:hover {
+  background-color: #b39118;
+}
+
+/* ========== CLIENTES ========== */
+.clientes__titulo {
+  text-align: center;
+  color: #000000;
+}
+
+.clientes__contenedorLogos--link {
+  display: inline-block;
+  width: 155px;
+}
+
+.clientes__contenedorLogos--img {
+  width: 100%;
+}
+
+/* ////////////////////////////// ACERCA.HTML ////////////////////////////// */
+/* ========== HISTORIA ========== */
+/* ========== EQUIPO ========== */
+.equipo {
+  margin: 0 auto;
+}
+
+.equipo__contenedorIntegrantes {
+  padding: 30px;
+}
+
+.equipo__informacion {
+  background-color: #0010a3;
+}
+
+.equipo__img {
+  width: 100%;
+}
+
+.equipo__nombre, .equipo__funcion {
+  color: #fff;
+}
+
+.equipo .equipo__nombre {
+  font-size: 20px;
+}
+
+.equipo .equipo__funcion {
+  font-size: 18px;
+}
+
+.equipo .equipo__link {
+  text-decoration: none;
+}
+
+.equipo .equipo__icono {
+  font-size: 25px;
+  color: #fff;
+  margin: 5px 5px 0px 5px;
+}
+
+/* ========== MISION VISON ========== */
+/* ////////////////////////////// SERVICIOS ////////////////////////////// */
+.servicios__contenedor {
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.servicios__nombre {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.servicios__img {
+  width: 70%;
+}
+
+/* ////////////////////////////// PORTAFOLIO ////////////////////////////// */
+.portafolio__botones {
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.portafolio__ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.portafolio__ul--btn {
+  padding: 0;
+}
+
+.portafolio__li, .portafolio__li--btn {
+  list-style: none;
+  background-color: #0010a3;
+  padding: 10px 22px;
+  border-radius: 5px;
+  margin: 20px 5px 0px 5px;
+  color: #fff;
+}
+
+.portafolio__li:hover, .portafolio__li--btn:hover {
+  background-color: #00063b;
+  color: inherit;
+}
+
+.portafolio__link, .portafolio__link--btn {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.portafolio__link:hover, .portafolio__link--btn:hover {
+  color: #fff;
+}
+
+.portafolio__div {
+  padding: 5px;
+}
+
+.portafolio__img {
+  width: 100%;
+  object-fit: cover;
+  padding-top: 15px;
+}
+
+/* ////////////////////////////// CONTACTO ////////////////////////////// */
+.contacto {
+  width: 75%;
+  height: 700px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacto__contenedorEncabezado {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.contacto__parrafo {
+  width: 100%;
+}
+
+.contacto__derecha, .contacto__izquierda {
+  width: 48%;
+  max-width: 500px;
+  margin-top: 0;
+  height: 500px;
+}
+
+.contacto__derecha {
+  min-height: 300px;
+}
+
+.contacto__label {
+  font-family: "Roboto", sans-serif;
+  color: #0010a3;
+  font-size: 18px;
+  display: block;
+  font-weight: 400;
+}
+
+.contacto__input, .contacto__textarea {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.contacto__textarea {
+  height: 150px;
+}
+
+.contacto__btn {
+  background-color: transparent;
+  border: 2px solid #0010a3;
+  color: #0010a3;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.contacto__btn:hover {
+  color: #ffffff;
+  background-color: #0010a3;
+  border: 2px solid #0010a3;
+}
+
+.contacto__informacion {
+  width: 100%;
+  padding: 30px 20px 30px 20px;
+  background-color: #0010a3;
+  border-radius: 10px;
+  display: block;
+}
+
+.contacto__datos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.contacto__info {
+  height: 10px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.contacto__info--alto {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.contacto__icono {
+  height: 15px;
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  position: relative;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(115deg, #00063b, #0010a3);
+  font-size: 16px;
+}
+
+.footer__rowUno {
+  margin-right: 0;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #f0c016 !important;
+}
+
+.text-small {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.footer__titulo {
+  font-weight: 700;
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer__link:hover, .footer__link:focus {
+  text-decoration: none;
+  color: #b39118;
+}
+
+.footer__email {
+  background: #fff;
+  border-color: #0010a3;
+}
+
+.footer__email:focus {
+  background: #00063b;
+}
+
+.footer__button {
+  background-color: #f0c016;
+}
+
+.footer__button:hover {
+  background-color: #b39118;
+}
+
+/* === ICONOS BOOTSTRAP === */
+.bi-twitter,
+.bi-instagram,
+.bi-facebook {
+  color: aliceblue;
+  font-size: 25px;
+}
+
+.fa-paper-plane {
+  color: #0010a3;
+}
+
+/*==  IMAGEN LOCAL ==*/
+.footer__subir {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 1.5rem;
+  top: -25px;
+  background-color: #0010a3;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.548);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* ////////////////////////////// MEDIAS QUERIES ////////////////////////////// */
+@media (max-width: 1024px) {
+  .bienvenida__derecha {
+    display: flex;
+    align-items: center;
+  }
+  .suscripcion__contenedor {
+    width: 55%;
+  }
+  .clientes, .equipo, .servicios, .portafolio, .contacto {
+    width: 90%;
+  }
+  .historia {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+  .historia__derecha {
+    display: flex;
+    align-items: center;
+  }
+  .misionVision {
+    padding: 0rem 0rem 5.5rem 0rem;
+  }
+  .misionVision__titulo {
+    text-align: center;
+  }
+  .servicios {
+    width: 90%;
+  }
+  .portafolio {
+    margin: 0 auto;
+  }
+  .contacto__contenedorEncabezado {
+    width: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 992px) {
+  .portafolio__div--oculto {
+    display: none !important;
+  }
+}
+
+/* ========== NOTEBOOKS ========== */
+@media (max-width: 768px) {
+  .menu__li {
+    background-color: #fff;
+    color: #0010a3;
+  }
+  .menu__li:hover {
+    background-color: #0010a3;
+    color: #fff;
+  }
+  .menu__link {
+    color: #0010a3 !important;
+  }
+  .menu__link::after {
+    display: none !important;
+  }
+  .menu__link:hover {
+    color: inherit !important;
+  }
+  .presentacion__izquierda {
+    width: 0px;
+  }
+  .presentacion__derecha {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .presentacion__titulo {
+    font-size: 45px;
+  }
+  .presentacion__parrafo {
+    font-size: 25px;
+  }
+  .bienvenida, .historia, .misionVision {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+  }
+  .bienvenida__titulo, .suscripcion__titulo, .clientes__titulo, .historia__titulo, .equipo__titulo, .misionVision__titulo, .servicios__titulo, .portafolio__titulo, .contacto__titulo {
+    text-align: center;
+  }
+  .suscripcion__contenedor {
+    width: 80%;
+  }
+  .clientes, .equipo, .servicios, .portafolio, .contacto {
+    width: 80%;
+  }
+  .historia {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2.5rem 0rem;
+  }
+  .historia__titulo {
+    text-align: center;
+  }
+  .equipo {
+    width: 80%;
+    padding: 0rem 0rem;
+  }
+  .equipo__contenedorEncabezado, .servicios__contenedorEncabezado, .portafolio__contenedorEncabezado, .contacto__contenedorEncabezado {
+    width: 100%;
+  }
+  .equipo__parrafo, .servicios__parrafo, .portafolio__parrafo, .contacto__parrafo {
+    width: 100%;
+  }
+  .misionVision {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0rem 0rem 2.5rem 0rem;
+  }
+  .servicios {
+    width: 80%;
+  }
+  .servicios__contenedorEncabezado {
+    width: 100%;
+  }
+  .portafolio {
+    width: 80%;
+  }
+  .portafolio__contenedorEncabezado {
+    width: 100%;
+  }
+  .contacto {
+    width: 80%;
+    height: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contacto__contenedorEncabezado {
+    width: calc(100% - 44px);
+  }
+  .contacto__derecha, .contacto__izquierda {
+    width: 100%;
+  }
+  .contacto__izquierda {
+    height: 400px;
+  }
+  .contacto__derecha {
+    height: 340px;
+  }
+}
+
+/* ========== MÓVIL ========== */
+@media (max-width: 480px) {
+  .menu__li {
+    background-color: #fff;
+    color: #0010a3;
+  }
+  .menu__li:hover {
+    background-color: #0010a3;
+    color: #fff;
+  }
+  .menu__link {
+    color: #0010a3 !important;
+  }
+  .menu__link::after {
+    display: none !important;
+  }
+  .menu__link:hover {
+    color: inherit !important;
+  }
+  .presentacion__titulo {
+    font-size: 35px;
+  }
+  .presentacion__parrafo {
+    font-size: 20px;
+  }
+  .bienvenida, .historia, .misionVision {
+    width: 100%;
+  }
+  .bienvenida__titulo, .suscripcion__titulo, .clientes__titulo, .historia__titulo, .equipo__titulo, .misionVision__titulo, .servicios__titulo, .portafolio__titulo, .contacto__titulo {
+    font-size: 28px;
+  }
+  .bienvenida__parrafo, .historia__parrafo, .equipo__parrafo, .servicios__parrafo, .portafolio__parrafo, .contacto__parrafo, .misionVision__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .suscripcion__titulo {
+    font-size: 28px;
+  }
+  .suscripcion__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .suscripcion__contenedor {
+    width: 90%;
+  }
+  .clientes, .equipo, .servicios, .portafolio, .contacto {
+    width: 100%;
+  }
+  .historia {
+    padding: 2rem 0rem 2rem 0rem;
+  }
+  .historia__titulo {
+    font-size: 28px;
+  }
+  .historia__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .equipo {
+    width: 90%;
+    padding: 0rem !important;
+  }
+  .equipo__titulo {
+    font-size: 28px;
+  }
+  .equipo__parrafo, .servicios__parrafo, .portafolio__parrafo, .contacto__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .equipo__contenedorEncabezado, .servicios__contenedorEncabezado, .portafolio__contenedorEncabezado, .contacto__contenedorEncabezado {
+    width: 100%;
+  }
+  .equipo__contenedorIntegrantes {
+    padding-bottom: 0;
+  }
+  .misionVision {
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  .misionVision__titulo {
+    font-size: 28px;
+  }
+  .misionVision__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .servicios {
+    width: 90%;
+    padding: 2rem 0rem 2rem 0rem;
+  }
+  .servicios__titulo {
+    font-size: 28px;
+  }
+  .servicios__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .portafolio {
+    width: 90%;
+    padding: 2rem 0rem 2.5rem 0rem;
+  }
+  .portafolio__titulo {
+    font-size: 28px;
+  }
+  .portafolio__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .contacto {
+    width: 85%;
+    height: 1020px;
+    justify-content: space-between;
+  }
+  .contacto__contenedorEncabezado {
+    width: 100%;
+  }
+  .contacto__titulo {
+    font-size: 28px;
+  }
+  .contacto__parrafo {
+    font-size: 16px;
+    width: 100%;
+  }
+  .contacto__izquierda {
+    height: 400px;
+  }
+  .contacto__derecha {
+    height: 250px;
+  }
+  .contacto__info {
+    font-size: 16px;
+  }
+}
+
+/* ========== MÓVIL ========== */
+@media (max-width: 320px) {
+  .presentacion__titulo {
+    font-size: 25px;
+  }
+  .presentacion__parrafo {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .bienvenida, .historia, .misionVision {
+    padding: 2rem 0rem;
+  }
+  .equipo {
+    padding: 0;
+  }
+  .misionVision {
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  .contacto {
+    height: 1070px;
+  }
+  .contacto__izquierda {
+    height: 400px;
+  }
+  .contacto__derecha {
+    height: 300px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

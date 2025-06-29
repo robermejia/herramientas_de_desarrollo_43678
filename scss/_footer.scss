@@ -1,0 +1,85 @@
+/* ========== FOOTER ========== */
+.footer {
+    position: relative;
+    width: 100%;
+    font-family: $fuente-principal;
+    background: $fondo-footer;
+    font-size: $fuente-footer;
+
+    &__rowUno {
+        margin-right: 0;
+    }
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: $color-secundario !important;
+}
+
+.text-small {
+    font-size: 0.9rem;
+    color: $color-blanco;
+}
+
+.footer {
+    &__titulo {
+        font-weight: 700;
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        text-decoration: none;
+        color: $color-secundario-hover;
+    }
+
+    &__email {
+        background: $color-blanco;
+        border-color: $color-primario;
+    }
+    
+    &__email:focus {
+        background: $color-primario-hover;
+    }
+    
+    &__button {
+        background-color: $color-secundario;
+    }
+    
+    &__button:hover {
+        background-color: $color-secundario-hover;
+    }
+}
+
+/* === ICONOS BOOTSTRAP === */
+.bi-twitter,
+.bi-instagram,
+.bi-facebook {
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.fa-paper-plane {
+    color: $color-primario;
+}
+
+/*==  IMAGEN LOCAL ==*/
+.footer {
+    &__subir {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        right: 1.5rem;
+        top: -25px;
+        background-color: $color-primario;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.548);
+        overflow: hidden;
+        text-decoration: none;
+    }
+}

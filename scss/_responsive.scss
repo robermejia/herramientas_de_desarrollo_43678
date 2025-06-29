@@ -1,0 +1,404 @@
+/* ////////////////////////////// MEDIAS QUERIES ////////////////////////////// */
+@media (max-width: 1024px) {
+    .bienvenida {
+        &__derecha {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .suscripcion {
+        &__contenedor {
+            width: 55%;
+        }
+    }
+
+    .clientes {
+        width: 90%;
+    }
+    
+    .historia {
+        padding: 2rem 0rem 1rem 0rem;
+        &__derecha {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .misionVision {
+        padding: 0rem 0rem 5.5rem 0rem;
+
+        &__titulo {
+            text-align: center;
+        }
+    }
+
+    .servicios {
+        width: 90%;
+    }
+
+    .portafolio {
+        margin: 0 auto;
+    }
+
+    .contacto {
+        &__contenedorEncabezado{
+            width: calc(100% - 100px);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .portafolio__div--oculto {
+      display: none !important;
+    }
+}
+/* ========== NOTEBOOKS ========== */
+@media (max-width: 768px) {
+    .menu {
+        &__li {
+            background-color: $color-blanco;
+            color: $color-primario;
+            
+            &:hover {
+                background-color: $color-primario;
+                color: $color-blanco;
+            }
+        }
+        
+        &__link {
+            color: $color-primario !important;
+            
+            &::after {
+                display: none !important;
+            }
+            
+            &:hover {
+                color: inherit !important;
+            }
+        }
+    }
+
+    .presentacion {
+        &__izquierda {
+            width: 0px;
+        }
+        
+        &__derecha {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        &__titulo {
+            font-size: $fuente-titulo-presentacion-768;
+        }
+        &__parrafo {
+            font-size: $fuente-parrafo-presentacion-768;
+        }
+    }
+
+    .bienvenida {
+        width: map-get($ancho, anchoSeccion768);
+        margin: 0 auto;
+        padding: 2rem 0rem;
+
+        
+        &__titulo {
+            text-align: center;
+        }
+    }
+
+    .suscripcion {
+        &__contenedor {
+            width: map-get($ancho, anchoSeccion768);
+        }
+    }
+
+    .clientes {
+        width: map-get($ancho, anchoSeccion768);
+    }
+
+    .historia {
+        width: map-get($ancho, anchoSeccion768);
+        margin: 0 auto;
+        padding: 2.5rem 0rem;
+        
+        &__titulo {
+            text-align: center;
+        }
+    }
+    
+    .equipo {
+        width: map-get($ancho, anchoSeccion768);
+        padding: 0rem 0rem;
+
+        &__contenedorEncabezado {
+            width: 100%;
+        }
+        
+        &__parrafo {
+            width: 100%;
+        }
+    
+    }
+
+    .misionVision {
+        width: map-get($ancho, anchoSeccion768);
+        margin: 0 auto;
+        padding: 0rem 0rem 2.5rem 0rem;
+    }
+
+    .servicios {
+        width: map-get($ancho, anchoSeccion768);
+        &__contenedorEncabezado {
+            width: 100%;
+        }
+    }
+
+    .portafolio {
+        width: map-get($ancho, anchoSeccion768);
+        &__contenedorEncabezado {
+            width: 100%;
+        }
+    }
+
+    .contacto {
+        width: map-get($ancho, anchoSeccion768);
+        height: 1100px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;   
+        
+        &__contenedorEncabezado {
+            width: calc(100% - 44px);
+        }
+
+        &__derecha,
+        &__izquierda {
+            width: 100%;
+        }
+      
+        &__izquierda {
+            height: 400px;
+        }
+      
+        &__derecha {
+            height: 340px;
+        }
+    }
+    
+
+}
+
+/* ========== MÓVIL ========== */
+@media (max-width: 480px) {
+    .menu {
+        &__li {
+            background-color: $color-blanco;
+            color: $color-primario;
+            
+            &:hover {
+                background-color: $color-primario;
+                color: $color-blanco;
+            }
+        }
+        
+        &__link {
+            color: $color-primario !important;
+            
+            &::after {
+                display: none !important;
+            }
+            
+            &:hover {
+                color: inherit !important;
+            }
+        }       
+    }
+
+    .presentacion {     
+        &__titulo {
+            font-size: $fuente-titulo-presentacion-480;
+        }
+        
+        &__parrafo {
+            font-size: $fuente-parrafo-presentacion-480;
+        }
+    }
+
+    .bienvenida {
+        width: 100%;
+
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+    }
+    
+    .suscripcion {
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+
+        &__contenedor {
+            width: 90%;
+        }
+    }
+
+    .clientes {
+        width: 100%;
+    }
+
+    .historia {
+        padding: 2rem 0rem 2rem 0rem;
+
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+    }
+
+    .equipo {
+        width: map-get($ancho, anchoSeccion480);
+        padding: 0rem !important;
+
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+
+        &__contenedorEncabezado {
+            width: 100%;
+        }
+
+        &__contenedorIntegrantes {
+            padding-bottom: 0;
+        }
+    }
+
+    .misionVision {
+        padding: 0rem 0rem 2rem 0rem;
+
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+    }
+
+    .servicios {
+        width: map-get($ancho, anchoSeccion480);
+        padding: 2rem 0rem 2rem 0rem;
+
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+    }
+
+    .portafolio {
+        width: map-get($ancho, anchoSeccion480);
+        padding: 2rem 0rem 2.5rem 0rem;
+
+        
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+    }
+
+    .contacto {
+        width: 85%;
+        height: 1020px;
+        justify-content: space-between;
+
+        &__contenedorEncabezado {
+            width: 100%;
+        } 
+
+        &__titulo {
+            font-size: $fuente-titulo-480;
+        }
+
+        &__parrafo {
+            font-size: $fuente-parrafo-480;
+            width: 100%;
+        }
+
+        &__izquierda {
+            height: 400px;
+        }
+      
+        &__derecha {
+            height: 250px;
+        }
+
+        &__info {
+            font-size: $fuente-parrafo-480;
+        }
+    } 
+}
+
+/* ========== MÓVIL ========== */
+@media (max-width: 320px) {
+    .presentacion {
+        &__titulo {
+            font-size: $fuente-titulo-presentacion-320;
+        }
+        &__parrafo {
+            font-size: $fuente-parrafo-presentacion-320;
+            line-height: 1.3;
+        }      
+    }
+
+    .bienvenida {
+        padding: 2rem 0rem;
+    }
+
+    .equipo {
+        padding: 0;
+    }
+
+    .misionVision {
+        padding: 0rem 0rem 2rem 0rem;
+    }
+
+    .contacto {
+        height: 1070px;
+        
+        &__izquierda {
+            height: 400px;
+        }
+      
+        &__derecha {
+            height: 300px;
+        }
+    }    
+}

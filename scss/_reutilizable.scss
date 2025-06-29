@@ -1,0 +1,155 @@
+/*==  PROPIEDADES QUE SE REPITEN ==*/
+/* ========== IGULAES 1 ========== */
+/*==  ENCABEZADO ==*/
+.equipo__contenedorEncabezado {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.servicios__contenedorEncabezado {
+  @extend .equipo__contenedorEncabezado;
+}
+
+.portafolio__contenedorEncabezado {
+  @extend .equipo__contenedorEncabezado;
+}
+
+.contacto__contenedorEncabezado {
+  @extend .equipo__contenedorEncabezado;
+}
+
+/*==  TÍTULO ==*/
+.bienvenida__titulo {
+  font-family: $fuente-secundario;
+  font-size: $fuente-titulo;
+  margin-bottom: 30px;
+  font-weight: $fuente-700;
+}
+
+.suscripcion__titulo {
+  @extend .bienvenida__titulo;
+}
+
+.clientes__titulo {
+  @extend .bienvenida__titulo;
+}
+
+.historia__titulo {
+  margin-top: 30px;
+  @extend .bienvenida__titulo;
+}
+
+.equipo__titulo {
+  @extend .bienvenida__titulo;  
+}
+
+.misionVision__titulo {
+  margin-top: 30px;
+  @extend .bienvenida__titulo;
+}
+
+.servicios__titulo {
+  @extend .bienvenida__titulo;
+}
+
+.portafolio__titulo {
+  @extend .bienvenida__titulo;
+}
+
+.contacto__titulo {
+  @extend .bienvenida__titulo;
+}
+
+/*==  PÁRRAFO ==*/
+.bienvenida__parrafo {
+  font-family: $fuente-secundario;
+  font-weight: $fuente-400;
+  font-size: $fuente-parrafo;
+  line-height: 1.7;
+}
+
+.historia__parrafo {
+  @extend .bienvenida__parrafo;
+}
+
+.equipo__parrafo {
+  width: 85%;
+  text-align: center;
+  color: $color-negro;
+  margin: 0 auto;
+  @extend .bienvenida__parrafo;
+}
+
+.misionVision__parrafo {
+  @extend .bienvenida__parrafo;  
+}
+
+.servicios__parrafo {
+  @extend .equipo__parrafo;
+}
+
+.portafolio__parrafo {
+  @extend .equipo__parrafo;
+}
+
+.contacto__parrafo {
+  @extend .equipo__parrafo;
+}
+
+/* ========== IGUALES 2 ========== */
+.historia__img {
+  width: 100%;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.245);  
+}
+
+.misionVision__img {
+  @extend .historia__img;
+}
+
+.row {
+  margin: 0;
+}
+
+/* ========== IGUALES 3 ========== */
+.bienvenida {
+  padding: 6rem 2rem;
+}
+
+.suscripcion ::placeholder,
+.footer ::placeholder {
+  padding-left: 15px;
+}
+
+.clientes {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 60px 0px;
+}
+
+.historia {
+  @extend .bienvenida;
+}
+
+.equipo {
+  @extend .clientes;
+}
+
+.misionVision {
+  @extend .bienvenida;
+}
+
+.servicios {
+  @extend .clientes;
+}
+
+.portafolio {
+  @extend .clientes;
+}
+
+.contacto {
+  @extend .clientes;
+}
+
+
+

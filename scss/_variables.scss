@@ -1,0 +1,48 @@
+$color-primario: #0010a3;
+$color-secundario: #f0c016;
+$color-primario-hover: #00063b;
+$color-secundario-hover: #b39118;
+$color-blanco: #fff;
+$color-negro: #000000;
+$color-transparente: transparent;
+$color-linea-link: #ffffff98;
+
+$fondo-suscripcion: linear-gradient(rgba(0, 0, 0, 0.163), rgba(0, 0, 0, 0.779), rgba(0, 0, 0, 0.163)), url('../assets/img/fondos/fondo-negro.jpg');
+$fondo-footer: linear-gradient(115deg, #00063b, #0010a3);
+$fondo-presentacion-home: url(../assets/img/fondos/home.jpg);
+$fondo-presentacion-acerca: url(../assets/img/fondos/acerca.jpg);
+$fondo-presentacion-servicios: url(../assets/img/fondos/servicios.jpg);
+$fondo-presentacion-portafolio: url(../assets/img/fondos/portafolio.jpg);
+$fondo-presentacion-contacto: url(../assets/img/fondos/contacto.jpg);
+
+$fuente-principal: 'Lato', sans-serif;
+$fuente-secundario: 'Roboto', sans-serif; 
+
+$fuente-400: 400;
+$fuente-500: 500;
+$fuente-600: 600;
+$fuente-700: 700; 
+
+$fuente-header: 20px;
+$fuente-titulo: 30px;
+$fuente-titulo-480: 28px;
+$fuente-sub-titulo: 20px;
+$fuente-parrafo: 18px;
+$fuente-parrafo-480: 16px;
+$fuente-titulo-presentacion-768: 45px;
+$fuente-titulo-presentacion-480: 35px;
+$fuente-titulo-presentacion-320: 25px;
+$fuente-parrafo-presentacion-768: 25px;
+$fuente-parrafo-presentacion-480: 20px;
+$fuente-parrafo-presentacion-320: 18px;
+$fuente-btn: 18px;
+$fuente-footer: 16px;
+$line-height-parrafo: 1.7;
+
+$ancho:(
+    anchoSeccion768: 80%,
+    anchoSeccion480: 90%,
+);
+    
+
+
